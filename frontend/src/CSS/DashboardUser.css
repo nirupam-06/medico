@@ -1,0 +1,218 @@
+/* DashboardUser.css - Professional Medical Interface */
+.user-dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 2rem 1rem;
+}
+
+.user-dashboard {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.user-dashboard-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.user-dashboard-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.user-dashboard-header p {
+  font-size: 1.1rem;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.user-dashboard-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.5);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.user-patient-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem 0;
+}
+
+.user-patient-table tr {
+  transition: all 0.2s ease;
+}
+
+.user-patient-table tr:not(:last-child) {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.user-patient-table tr:hover {
+  background-color: #f8fafc;
+  transform: translateX(4px);
+}
+
+.user-patient-table td {
+  padding: 1.25rem 1rem;
+  vertical-align: middle;
+}
+
+.user-patient-table td:first-child {
+  font-weight: 600;
+  color: #1e293b;
+  width: 30%;
+  text-align: right;
+  padding-right: 2rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  background-color: #f8fafc;
+  border-radius: 8px 0 0 8px;
+}
+
+.user-patient-table td:last-child {
+  width: 70%;
+  color: #374151;
+  font-weight: 500;
+  border-radius: 0 8px 8px 0;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.error-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.error-state h3 {
+  color: #dc2626;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.no-data-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.no-data-state h3 {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.patient-id-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .user-dashboard-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .user-dashboard-card {
+    padding: 1.5rem;
+    margin: 0 0.5rem 2rem;
+  }
+  
+  .user-dashboard-header h2 {
+    font-size: 2rem;
+  }
+  
+  .user-patient-table {
+    display: block;
+  }
+  
+  .user-patient-table tr {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  .user-patient-table td {
+    padding: 0.5rem 0;
+    width: 100% !important;
+    text-align: left !important;
+    background: none !important;
+    border-radius: 0 !important;
+  }
+  
+  .user-patient-table td:first-child {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+    color: #1e293b;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-dashboard-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .user-dashboard-header p {
+    font-size: 1rem;
+  }
+  
+  .user-dashboard-card {
+    padding: 1rem;
+  }
+  
+  .user-patient-table td {
+    padding: 0.75rem 0;
+  }
+}

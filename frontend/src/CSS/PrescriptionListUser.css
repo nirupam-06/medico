@@ -1,0 +1,224 @@
+/* PrescriptionListUser.css - Professional Medical Interface */
+.prescription-list-user-container {
+  width: 100%;
+}
+
+.prescription-list-user-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.prescription-list-user-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.prescription-table-user {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+}
+
+.prescription-table-user thead {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.prescription-table-user th {
+  padding: 1.25rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.prescription-table-user tbody tr {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.prescription-table-user tbody tr:last-child {
+  border-bottom: none;
+}
+
+.prescription-table-user tbody tr:hover {
+  background-color: #f8fafc;
+  transform: translateX(4px);
+}
+
+.prescription-table-user td {
+  padding: 1.25rem 1rem;
+  vertical-align: top;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.prescription-table-user td:last-child {
+  border-bottom: none;
+}
+
+.medication-cell-user {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1rem;
+}
+
+.dosage-cell-user {
+  color: #3b82f6;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.instructions-cell-user {
+  color: #64748b;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  max-width: 400px;
+}
+
+/* Empty State */
+.empty-state-user {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #64748b;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+}
+
+.empty-state-user p {
+  margin: 0;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* Card Styling */
+.prescription-card-user {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+/* Status Indicators */
+.prescription-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.status-active {
+  background: rgba(16, 185, 129, 0.1);
+  color: #065f46;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.status-completed {
+  background: rgba(59, 130, 246, 0.1);
+  color: #1e40af;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .prescription-table-user {
+    font-size: 0.9rem;
+  }
+  
+  .prescription-table-user th,
+  .prescription-table-user td {
+    padding: 1rem 0.75rem;
+  }
+  
+  .instructions-cell-user {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prescription-list-user-container {
+    overflow-x: auto;
+  }
+  
+  .prescription-table-user {
+    min-width: 600px;
+  }
+  
+  .prescription-card-user {
+    padding: 1.5rem;
+  }
+  
+  .prescription-list-user-title {
+    font-size: 1.25rem;
+  }
+  
+  .empty-state-user {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .prescription-card-user {
+    padding: 1.25rem;
+  }
+  
+  .prescription-list-user-title {
+    font-size: 1.1rem;
+  }
+  
+  .empty-state-user {
+    padding: 1.5rem 1rem;
+  }
+  
+  .empty-state-user p {
+    font-size: 0.9rem;
+  }
+  
+  .prescription-table-user th,
+  .prescription-table-user td {
+    padding: 0.875rem 0.5rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.prescription-table-user tbody tr {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.prescription-table-user tbody tr:nth-child(1) { animation-delay: 0.05s; }
+.prescription-table-user tbody tr:nth-child(2) { animation-delay: 0.1s; }
+.prescription-table-user tbody tr:nth-child(3) { animation-delay: 0.15s; }
+.prescription-table-user tbody tr:nth-child(4) { animation-delay: 0.2s; }
+.prescription-table-user tbody tr:nth-child(5) { animation-delay: 0.25s; }
